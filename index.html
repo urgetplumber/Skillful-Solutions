@@ -3,432 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skillful Solutions - 24/7 Emergency Plumber in California</title>
-<meta name="description" content="Skillful Solutions offers 24/7 emergency plumbing services across California. Call 1-833-704-6186 for fast, reliable plumbing repairs.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Skillful Solutions - 24/7 Emergency Plumber California</title>
+<meta name="description" content="Skillful Solutions - 24/7 Emergency Plumbing Services in California. Call (833) 704-6186">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-  html { scroll-behavior: smooth; }
-  body { color:#333; line-height:1.6; }
-  :root {
-    --teal: #0d7377;
-    --dark-teal: #0a5a5d;
-    --orange: #ff6b35;
-    --dark-orange: #e85a2a;
-    --light-bg: #f4faf9;
-  }
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+html { scroll-behavior:smooth; }
+:root { --teal:#0d7377; --dark-teal:#0a5a5d; --orange:#ff6b35; --dark-orange:#e85a2a; --light-bg:#f4faf9; }
 
-  /* HEADER */
-  header {
-    background: var(--dark-teal);
-    position: fixed;
-    top:0; left:0; right:0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  }
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 15px 20px;
-  }
-  .logo {
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:#fff;
-    font-size:22px;
-    font-weight:800;
-  }
-  .logo i { color: var(--orange); font-size:28px; }
-  nav ul {
-    list-style:none;
-    display:flex;
-    gap:30px;
-  }
-  nav ul li a {
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
-  }
-  nav ul li a:hover { color: var(--orange); }
-  .call-btn {
-    background: var(--orange);
-    color:#fff;
-    padding:10px 22px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    transition:0.3s;
-  }
-  .call-btn:hover { background: var(--dark-orange); transform: scale(1.05); }
-  .menu-toggle { display:none; color:#fff; font-size:26px; cursor:pointer; }
+/* PAGE SWITCHING */
+.page { display:none; }
+.page.active { display:block; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, rgba(13,115,119,0.92), rgba(10,90,93,0.95)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1600&q=80') center/cover;
-    color:#fff;
-    padding: 160px 20px 100px;
-    text-align:center;
-  }
-  .hero h1 {
-    font-size: 48px;
-    font-weight:800;
-    margin-bottom:20px;
-    max-width:800px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .hero span { color: var(--orange); }
-  .hero p {
-    font-size:20px;
-    max-width:650px;
-    margin:0 auto 35px;
-    opacity:0.95;
-  }
-  .hero-buttons {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-  }
-  .btn-primary {
-    background: var(--orange);
-    color:#fff;
-    padding:16px 35px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:700;
-    font-size:18px;
-    transition:0.3s;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-  }
-  .btn-primary:hover { background: var(--dark-orange); transform: translateY(-3px); }
-  .btn-secondary {
-    background:transparent;
-    border:2px solid #fff;
-    color:#fff;
-    padding:14px 35px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:700;
-    font-size:18px;
-    transition:0.3s;
-  }
-  .btn-secondary:hover { background:#fff; color:var(--teal); }
+/* HEADER */
+header { background:var(--dark-teal); position:fixed; top:0; left:0; right:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,0.2); }
+.nav-container { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
+.logo { display:flex; align-items:center; gap:10px; color:#fff; font-size:22px; font-weight:800; cursor:pointer; }
+.logo i { color:var(--orange); font-size:28px; }
+nav ul { list-style:none; display:flex; gap:25px; }
+nav ul li a { color:#fff; text-decoration:none; font-weight:600; transition:0.3s; padding:5px 0; border-bottom:2px solid transparent; cursor:pointer; }
+nav ul li a:hover, nav ul li a.active { color:var(--orange); border-bottom:2px solid var(--orange); }
+.call-btn { background:var(--orange); color:#fff; padding:10px 22px; border-radius:30px; text-decoration:none; font-weight:700; display:flex; align-items:center; gap:8px; transition:0.3s; }
+.call-btn:hover { background:var(--dark-orange); }
+.menu-toggle { display:none; color:#fff; font-size:26px; cursor:pointer; background:none; border:none; }
+.mobile-nav { display:none; background:var(--dark-teal); padding:10px 0; }
+.mobile-nav a { display:block; color:#fff; padding:12px 20px; text-decoration:none; font-weight:600; border-bottom:1px solid rgba(255,255,255,0.1); cursor:pointer; }
+.mobile-nav a:hover { color:var(--orange); background:rgba(255,255,255,0.05); }
 
-  .badge-row {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    margin-top:50px;
-    flex-wrap:wrap;
-  }
-  .badge-item {
-    text-align:center;
-  }
-  .badge-item i { font-size:30px; color:var(--orange); margin-bottom:8px; display:block; }
-  .badge-item span { font-weight:600; font-size:15px; }
+/* HERO */
+.hero { background:linear-gradient(135deg, rgba(13,115,119,0.92), rgba(10,90,93,0.95)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1600&q=80') center/cover; color:#fff; padding:160px 20px 100px; text-align:center; }
+.hero h1 { font-size:48px; font-weight:800; margin-bottom:20px; max-width:800px; margin-left:auto; margin-right:auto; }
+.hero span { color:var(--orange); }
+.hero p { font-size:20px; max-width:650px; margin:0 auto 35px; opacity:0.95; }
+.hero-buttons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+.btn-primary { background:var(--orange); color:#fff; padding:16px 35px; border-radius:30px; text-decoration:none; font-weight:700; font-size:18px; transition:0.3s; display:inline-flex; align-items:center; gap:10px; }
+.btn-primary:hover { background:var(--dark-orange); transform:translateY(-3px); }
+.btn-secondary { background:transparent; border:2px solid #fff; color:#fff; padding:14px 35px; border-radius:30px; text-decoration:none; font-weight:700; font-size:18px; transition:0.3s; cursor:pointer; }
+.btn-secondary:hover { background:#fff; color:var(--teal); }
+.badge-row { display:flex; justify-content:center; gap:40px; margin-top:50px; flex-wrap:wrap; }
+.badge-item { text-align:center; }
+.badge-item i { font-size:30px; color:var(--orange); margin-bottom:8px; display:block; }
+.badge-item span { font-weight:600; font-size:15px; }
 
-  /* SECTION TITLES */
-  .section-title {
-    text-align:center;
-    margin-bottom:50px;
-  }
-  .section-title h2 {
-    font-size:36px;
-    color:var(--dark-teal);
-    font-weight:800;
-  }
-  .section-title p {
-    color:#666;
-    font-size:17px;
-    margin-top:10px;
-  }
+/* SECTION TITLE */
+.section-title { text-align:center; margin-bottom:50px; }
+.section-title h2 { font-size:36px; color:var(--dark-teal); font-weight:800; }
+.section-title p { color:#666; font-size:17px; margin-top:10px; }
+.underline { width:60px; height:4px; background:var(--orange); margin:12px auto 0; border-radius:2px; }
 
-  /* SERVICES */
-  .services {
-    padding:90px 20px;
-    background: var(--light-bg);
-  }
-  .services-grid {
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap:30px;
-  }
-  .service-card {
-    background:#fff;
-    padding:35px 25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    transition:0.3s;
-    border-bottom: 4px solid transparent;
-  }
-  .service-card:hover {
-    transform: translateY(-8px);
-    border-bottom: 4px solid var(--orange);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-  }
-  .service-icon {
-    width:70px; height:70px;
-    background: linear-gradient(135deg, var(--teal), var(--dark-teal));
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-  }
-  .service-icon i { color:#fff; font-size:28px; }
-  .service-card h3 {
-    color: var(--dark-teal);
-    font-size:20px;
-    margin-bottom:12px;
-  }
-  .service-card p { color:#666; font-size:15px; }
+/* SERVICES */
+.services-section { padding:90px 20px; background:var(--light-bg); }
+.services-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; }
+.service-card { background:#fff; padding:35px 25px; border-radius:15px; text-align:center; box-shadow:0 5px 20px rgba(0,0,0,0.06); transition:0.3s; border-bottom:4px solid transparent; }
+.service-card:hover { transform:translateY(-8px); border-bottom:4px solid var(--orange); box-shadow:0 15px 30px rgba(0,0,0,0.12); }
+.service-icon { width:70px; height:70px; background:linear-gradient(135deg, var(--teal), var(--dark-teal)); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; }
+.service-icon i { color:#fff; font-size:28px; }
+.service-card h3 { color:var(--dark-teal); font-size:20px; margin-bottom:12px; }
+.service-card p { color:#666; font-size:15px; }
 
-  /* ABOUT */
-  .about {
-    padding:90px 20px;
-  }
-  .about-container {
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:60px;
-    align-items:center;
-  }
-  .about-img img {
-    width:100%;
-    border-radius:15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  }
-  .about-text h2 {
-    font-size:34px;
-    color:var(--dark-teal);
-    font-weight:800;
-    margin-bottom:20px;
-  }
-  .about-text p { color:#555; margin-bottom:15px; font-size:16px; }
-  .about-features {
-    list-style:none;
-    margin-top:20px;
-  }
-  .about-features li {
-    margin-bottom:12px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:600;
-    color:#333;
-  }
-  .about-features i { color: var(--orange); font-size:20px; }
+/* STATS */
+.stats { background:var(--dark-teal); padding:70px 20px; color:#fff; }
+.stats-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); text-align:center; gap:30px; }
+.stats-grid h3 { font-size:42px; color:var(--orange); font-weight:800; }
+.stats-grid p { margin-top:8px; font-size:16px; }
 
-  /* WHY CHOOSE US / STATS */
-  .stats {
-    background: var(--dark-teal);
-    padding:70px 20px;
-    color:#fff;
-  }
-  .stats-grid {
-    max-width:1100px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    text-align:center;
-    gap:30px;
-  }
-  .stats-grid h3 {
-    font-size:42px;
-    color: var(--orange);
-    font-weight:800;
-  }
-  .stats-grid p { margin-top:8px; font-size:16px; }
+/* TESTIMONIALS */
+.testimonials { padding:90px 20px; }
+.testi-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px; }
+.testi-card { background:#fff; padding:30px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); border-left:5px solid var(--orange); }
+.stars { color:var(--orange); margin-bottom:15px; font-size:18px; }
+.testi-card p { color:#555; font-style:italic; margin-bottom:20px; }
+.testi-author { display:flex; align-items:center; gap:12px; }
+.avatar { width:45px; height:45px; background:var(--teal); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
+.testi-author h4 { font-size:15px; color:var(--dark-teal); }
+.testi-author span { font-size:13px; color:#888; }
 
-  /* TESTIMONIALS */
-  .testimonials {
-    padding:90px 20px;
-    background: var(--light-bg);
-  }
-  .testi-grid {
-    max-width:1100px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap:30px;
-  }
-  .testi-card {
-    background:#fff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-  }
-  .testi-card .stars { color: var(--orange); margin-bottom:15px; }
-  .testi-card p { color:#555; font-style:italic; margin-bottom:20px; }
-  .testi-author { display:flex; align-items:center; gap:12px; }
-  .testi-author .avatar {
-    width:45px; height:45px;
-    background: var(--teal);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:700;
-  }
-  .testi-author h4 { font-size:15px; color:var(--dark-teal); }
-  .testi-author span { font-size:13px; color:#888; }
+/* CTA */
+.cta { background:linear-gradient(135deg, var(--orange), var(--dark-orange)); padding:70px 20px; text-align:center; color:#fff; }
+.cta h2 { font-size:36px; margin-bottom:15px; font-weight:800; }
+.cta p { font-size:18px; margin-bottom:30px; }
+.cta-btn { background:#fff; color:var(--orange); padding:16px 40px; border-radius:30px; text-decoration:none; font-weight:800; font-size:18px; display:inline-flex; align-items:center; gap:10px; transition:0.3s; }
+.cta-btn:hover { transform:scale(1.05); }
 
-  /* CTA */
-  .cta {
-    background: linear-gradient(135deg, var(--orange), var(--dark-orange));
-    padding:60px 20px;
-    text-align:center;
-    color:#fff;
-  }
-  .cta h2 { font-size:32px; margin-bottom:15px; font-weight:800; }
-  .cta p { font-size:18px; margin-bottom:25px; }
-  .cta a {
-    background:#fff;
-    color: var(--orange);
-    padding:16px 40px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:18px;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-  }
+/* PAGE BANNER */
+.page-banner { background:linear-gradient(135deg, var(--dark-teal), var(--teal)); color:#fff; padding:140px 20px 70px; text-align:center; }
+.page-banner h1 { font-size:42px; font-weight:800; margin-bottom:15px; }
+.page-banner p { font-size:18px; opacity:0.9; }
+.breadcrumb { margin-top:15px; }
+.breadcrumb a { color:var(--orange); cursor:pointer; }
+.breadcrumb span { color:#cde; }
 
-  /* CONTACT */
-  .contact {
-    padding:90px 20px;
-  }
-  .contact-container {
-    max-width:1100px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap:50px;
-  }
-  .contact-info h2 {
-    color:var(--dark-teal);
-    font-size:30px;
-    margin-bottom:20px;
-    font-weight:800;
-  }
-  .contact-item {
-    display:flex;
-    gap:15px;
-    margin-bottom:25px;
-    align-items:flex-start;
-  }
-  .contact-item i {
-    background: var(--teal);
-    color:#fff;
-    width:45px; height:45px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    flex-shrink:0;
-  }
-  .contact-item h4 { color:var(--dark-teal); margin-bottom:5px; }
-  .contact-item p, .contact-item a { color:#666; text-decoration:none; }
+/* ABOUT */
+.about-section { padding:90px 20px; }
+.about-container { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.about-img img { width:100%; border-radius:15px; box-shadow:0 15px 30px rgba(0,0,0,0.15); }
+.about-text h2 { font-size:34px; color:var(--dark-teal); font-weight:800; margin-bottom:20px; }
+.about-text p { color:#555; margin-bottom:15px; font-size:16px; line-height:1.8; }
+.about-features { list-style:none; margin-top:20px; }
+.about-features li { margin-bottom:12px; display:flex; align-items:center; gap:12px; font-weight:600; color:#333; }
+.about-features i { color:var(--orange); font-size:20px; }
 
-  form {
-    background: var(--light-bg);
-    padding:35px;
-    border-radius:15px;
-  }
-  form input, form textarea {
-    width:100%;
-    padding:14px;
-    margin-bottom:18px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-family:inherit;
-    font-size:15px;
-  }
-  form button {
-    background: var(--orange);
-    color:#fff;
-    border:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-weight:700;
-    font-size:16px;
-    cursor:pointer;
-    width:100%;
-    transition:0.3s;
-  }
-  form button:hover { background: var(--dark-orange); }
+/* VALUES */
+.values { padding:80px 20px; background:var(--light-bg); }
+.values-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:30px; }
+.value-card { background:#fff; padding:35px 25px; border-radius:15px; text-align:center; box-shadow:0 5px 20px rgba(0,0,0,0.06); transition:0.3s; }
+.value-card:hover { transform:translateY(-5px); }
+.value-card i { font-size:40px; color:var(--teal); margin-bottom:15px; display:block; }
+.value-card h3 { color:var(--dark-teal); margin-bottom:10px; font-size:18px; }
+.value-card p { color:#666; font-size:14px; }
 
-  /* FOOTER */
-  footer {
-    background: var(--dark-teal);
-    color:#fff;
-    padding:50px 20px 20px;
-  }
-  .footer-container {
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:30px;
-    margin-bottom:30px;
-  }
-  .footer-col h4 { color: var(--orange); margin-bottom:18px; font-size:18px; }
-  .footer-col p, .footer-col a {
-    color:#cde;
-    text-decoration:none;
-    display:block;
-    margin-bottom:10px;
-    font-size:14px;
-  }
-  .footer-bottom {
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,0.15);
-    padding-top:20px;
-    font-size:14px;
-    color:#aac;
-  }
+/* TEAM */
+.team { padding:90px 20px; }
+.team-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:30px; }
+.team-card { text-align:center; background:#fff; padding:30px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.06); }
+.team-img { width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg, var(--teal), var(--dark-teal)); margin:0 auto 20px; display:flex; align-items:center; justify-content:center; }
+.team-img i { font-size:45px; color:#fff; }
+.team-card h3 { color:var(--dark-teal); font-size:18px; margin-bottom:5px; }
+.team-card span { color:var(--orange); font-weight:600; font-size:13px; }
+.team-card p { color:#666; font-size:14px; margin-top:10px; }
 
-  /* Floating Call Button (mobile) */
-  .float-call {
-    position:fixed;
-    bottom:20px; right:20px;
-    background: var(--orange);
-    color:#fff;
-    width:60px; height:60px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-size:26px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    z-index:999;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255,107,53,0.6); }
-    70% { box-shadow: 0 0 0 15px rgba(255,107,53,0); }
-    100% { box-shadow: 0 0 0 0 rgba(255,107,53,0); }
-  }
+/* SERVICES DETAIL PAGE */
+.services-detail { padding:90px 20px; }
+.service-block { max-width:1100px; margin:0 auto 70px; display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+.service-block.reverse { direction:rtl; }
+.service-block.reverse > * { direction:ltr; }
+.service-block img { width:100%; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.12); }
+.service-content h2 { font-size:28px; color:var(--dark-teal); font-weight:800; margin-bottom:15px; }
+.service-content p { color:#555; font-size:16px; line-height:1.8; margin-bottom:15px; }
+.service-content ul { list-style:none; margin-bottom:20px; }
+.service-content ul li { padding:8px 0; border-bottom:1px solid #eee; display:flex; align-items:center; gap:10px; color:#444; }
+.service-content ul li i { color:var(--orange); }
+.service-content .call-now { background:var(--orange); color:#fff; padding:12px 28px; border-radius:30px; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:8px; transition:0.3s; }
+.service-content .call-now:hover { background:var(--dark-orange); }
 
-  @media(max-width: 768px) {
-    nav ul { display:none; }
-    .about-container, .contact-container { grid-template-columns: 1fr; }
-    .hero h1 { font-size:32px; }
-    .hero p { font-size:17px; }
-  }
+/* WHY */
+.why-us { padding:80px 20px; background:var(--light-bg); }
+.why-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:25px; }
+.why-card { background:#fff; padding:30px 20px; border-radius:15px; text-align:center; box-shadow:0 3px 15px rgba(0,0,0,0.06); }
+.why-card i { font-size:36px; color:var(--teal); margin-bottom:15px; display:block; }
+.why-card h3 { color:var(--dark-teal); margin-bottom:10px; }
+.why-card p { color:#666; font-size:14px; }
+
+/* CONTACT */
+.emergency-bar { background:var(--orange); padding:20px; text-align:center; color:#fff; margin-top:80px; }
+.emergency-bar h2 { font-size:22px; font-weight:800; margin-bottom:8px; }
+.emergency-bar a { color:#fff; text-decoration:none; font-size:28px; font-weight:800; display:inline-flex; align-items:center; gap:10px; }
+.contact-section { padding:90px 20px; }
+.contact-container { max-width:1150px; margin:0 auto; display:grid; grid-template-columns:1fr 1.3fr; gap:50px; }
+.contact-info h2 { color:var(--dark-teal); font-size:28px; font-weight:800; margin-bottom:25px; }
+.contact-card { display:flex; gap:18px; align-items:flex-start; margin-bottom:28px; padding:22px; background:var(--light-bg); border-radius:12px; }
+.contact-card .icon { width:50px; height:50px; background:linear-gradient(135deg, var(--teal), var(--dark-teal)); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; flex-shrink:0; }
+.contact-card h4 { color:var(--dark-teal); margin-bottom:5px; font-size:16px; }
+.contact-card p, .contact-card a { color:#555; text-decoration:none; font-size:15px; }
+.contact-card a:hover { color:var(--orange); }
+.social-links { margin-top:30px; }
+.social-links h4 { color:var(--dark-teal); margin-bottom:15px; font-size:16px; font-weight:700; }
+.social-icons { display:flex; gap:12px; }
+.social-icons a { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:18px; transition:0.3s; text-decoration:none; }
+.social-icons a.fb { background:#1877f2; }
+.social-icons a.tw { background:#1da1f2; }
+.social-icons a.ig { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.social-icons a:hover { transform:scale(1.1); }
+.contact-form-box { background:var(--light-bg); padding:40px; border-radius:20px; }
+.contact-form-box h2 { color:var(--dark-teal); font-size:26px; font-weight:800; margin-bottom:25px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.form-group { margin-bottom:18px; }
+.form-group label { display:block; margin-bottom:6px; font-weight:600; color:#333; font-size:14px; }
+.form-group input, .form-group select, .form-group textarea { width:100%; padding:13px 15px; border:1px solid #ddd; border-radius:10px; font-family:inherit; font-size:15px; background:#fff; transition:0.3s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline:none; border-color:var(--teal); box-shadow:0 0 0 3px rgba(13,115,119,0.1); }
+.submit-btn { background:var(--orange); color:#fff; border:none; padding:16px; border-radius:12px; font-weight:700; font-size:16px; cursor:pointer; width:100%; transition:0.3s; display:flex; align-items:center; justify-content:center; gap:10px; }
+.submit-btn:hover { background:var(--dark-orange); }
+.map-section { padding:0 20px 80px; }
+.map-container { max-width:1150px; margin:0 auto; }
+.map-container h2 { color:var(--dark-teal); font-size:28px; font-weight:800; margin-bottom:20px; text-align:center; }
+.map-placeholder { width:100%; height:300px; background:linear-gradient(135deg, var(--light-bg), #d0ecea); border-radius:15px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:15px; border:2px dashed var(--teal); }
+.map-placeholder i { font-size:50px; color:var(--teal); }
+.map-placeholder p { color:var(--dark-teal); font-size:18px; font-weight:600; }
+.map-placeholder span { color:#666; font-size:14px; text-align:center; }
+
+/* FAQ */
+.faq { padding:80px 20px; background:var(--light-bg); }
+.faq-container { max-width:800px; margin:0 auto; }
+.faq-item { background:#fff; border-radius:12px; margin-bottom:15px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,0.05); }
+.faq-question { padding:20px 25px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:700; color:var(--dark-teal); font-size:16px; }
+.faq-question i { color:var(--orange); transition:0.3s; }
+.faq-answer { padding:0 25px 20px; color:#555; font-size:15px; line-height:1.7; display:none; }
+.faq-item.open .faq-answer { display:block; }
+.faq-item.open .faq-question i { transform:rotate(180deg); }
+
+/* FOOTER */
+footer { background:var(--dark-teal); color:#fff; padding:50px 20px 20px; }
+.footer-container { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:30px; margin-bottom:30px; }
+.footer-col h4 { color:var(--orange); margin-bottom:18px; font-size:18px; }
+.footer-col p, .footer-col a { color:#cde; text-decoration:none; display:block; margin-bottom:10px; font-size:14px; cursor:pointer; }
+.footer-col a:hover { color:var(--orange); }
+.footer-bottom { text-align:center; border-top:1px solid rgba(255,255,255,0.15); padding-top:20px; font-size:14px; color:#aac; max-width:1200px; margin:0 auto; }
+
+/* FLOAT BUTTON */
+.float-call { position:fixed; bottom:20px; right:20px; background:var(--orange); color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:26px; box-shadow:0 5px 20px rgba(0,0,0,0.3); z-index:999; text-decoration:none; animation:pulse 2s infinite; }
+@keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,107,53,0.6);}70%{box-shadow:0 0 0 15px rgba(255,107,53,0);}100%{box-shadow:0 0 0 0 rgba(255,107,53,0);} }
+
+@media(max-width:768px) {
+  nav ul, .call-btn { display:none; }
+  .menu-toggle { display:block; }
+  .mobile-nav.open { display:block; }
+  .hero h1 { font-size:30px; }
+  .hero p { font-size:16px; }
+  .badge-row { gap:20px; }
+  .about-container { grid-template-columns:1fr; }
+  .service-block, .service-block.reverse { grid-template-columns:1fr; direction:ltr; }
+  .contact-container { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  .page-banner h1 { font-size:28px; }
+}
 </style>
 </head>
 <body>
@@ -439,173 +227,495 @@
 <!-- HEADER -->
 <header>
   <div class="nav-container">
-    <div class="logo"><i class="fas fa-faucet-drip"></i> Skillful Solutions</div>
+    <div class="logo" onclick="showPage('home')"><i class="fas fa-faucet-drip"></i> Skillful Solutions</div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+        <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+        <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+        <li><a onclick="showPage('contact')" id="nav-contact">Contact</a></li>
       </ul>
     </nav>
     <a href="tel:18337046186" class="call-btn"><i class="fas fa-phone"></i> (833) 704-6186</a>
+    <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a onclick="showPage('home');closeMobileMenu()">🏠 Home</a>
+    <a onclick="showPage('about');closeMobileMenu()">👥 About</a>
+    <a onclick="showPage('services');closeMobileMenu()">🔧 Services</a>
+    <a onclick="showPage('contact');closeMobileMenu()">📞 Contact</a>
+    <a href="tel:18337046186"><i class="fas fa-phone"></i> (833) 704-6186</a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <h1>24/7 Emergency Plumber in <span>California</span></h1>
-  <p>Fast, reliable, and affordable plumbing solutions whenever you need them. Skillful Solutions is here to help, day or night.</p>
-  <div class="hero-buttons">
-    <a href="tel:18337046186" class="btn-primary"><i class="fas fa-phone-volume"></i> Call Now: (833) 704-6186</a>
-    <a href="#contact" class="btn-secondary">Get Free Estimate</a>
-  </div>
-  <div class="badge-row">
-    <div class="badge-item"><i class="fas fa-clock"></i><span>24/7 Availability</span></div>
-    <div class="badge-item"><i class="fas fa-certificate"></i><span>Licensed & Insured</span></div>
-    <div class="badge-item"><i class="fas fa-star"></i><span>Top Rated Service</span></div>
-    <div class="badge-item"><i class="fas fa-bolt"></i><span>Fast Response Time</span></div>
-  </div>
-</section>
+<!-- ==================== HOME PAGE ==================== -->
+<div id="page-home" class="page active">
 
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="section-title">
-    <h2>Our Plumbing Services</h2>
-    <p>Comprehensive plumbing solutions for homes and businesses across California</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-house-flood-water"></i></div>
-      <h3>Emergency Plumbing</h3>
-      <p>Round-the-clock emergency response for urgent plumbing issues, any time of day or night.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>California's #1 <span>24/7 Emergency</span> Plumbing Service</h1>
+    <p>Fast, reliable, and affordable plumbing solutions whenever you need them — day or night.</p>
+    <div class="hero-buttons">
+      <a href="tel:18337046186" class="btn-primary"><i class="fas fa-phone-volume"></i> Call Now: (833) 704-6186</a>
+      <button class="btn-secondary" onclick="showPage('contact')">Get Free Estimate</button>
     </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-water"></i></div>
-      <h3>Drain Cleaning</h3>
-      <p>Professional drain clearing to remove clogs and keep your pipes flowing smoothly.</p>
+    <div class="badge-row">
+      <div class="badge-item"><i class="fas fa-clock"></i><span>24/7 Availability</span></div>
+      <div class="badge-item"><i class="fas fa-certificate"></i><span>Licensed & Insured</span></div>
+      <div class="badge-item"><i class="fas fa-star"></i><span>Top Rated</span></div>
+      <div class="badge-item"><i class="fas fa-bolt"></i><span>Fast Response</span></div>
     </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-magnifying-glass"></i></div>
-      <h3>Leak Detection</h3>
-      <p>Advanced leak detection technology to find and fix leaks before they cause major damage.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-fire-flame-simple"></i></div>
-      <h3>Water Heater Repair</h3>
-      <p>Installation, repair, and maintenance for all types of water heaters.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-snowflake"></i></div>
-      <h3>Frozen & Burst Pipe Repair</h3>
-      <p>Quick response for frozen or burst pipes to prevent flooding and property damage.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-road"></i></div>
-      <h3>Sewer Line Repair</h3>
-      <p>Expert sewer line diagnosis and repair using the latest camera inspection technology.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-container">
-    <div class="about-img">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Professional Plumber at Work">
+  <!-- SERVICES PREVIEW -->
+  <section class="services-section">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Complete plumbing solutions for homes & businesses in California</p>
+      <div class="underline"></div>
     </div>
-    <div class="about-text">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-house-flood-water"></i></div>
+        <h3>Emergency Plumbing</h3>
+        <p>Round-the-clock emergency response for all urgent plumbing issues.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-water"></i></div>
+        <h3>Drain Cleaning</h3>
+        <p>Professional drain clearing to remove clogs and keep pipes flowing.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-magnifying-glass"></i></div>
+        <h3>Leak Detection</h3>
+        <p>Advanced technology to find and fix leaks before they cause damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-fire-flame-simple"></i></div>
+        <h3>Water Heater Repair</h3>
+        <p>Installation, repair & maintenance for all types of water heaters.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+        <h3>Frozen & Burst Pipes</h3>
+        <p>Quick response for burst pipes to prevent flooding and damage.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-road"></i></div>
+        <h3>Sewer Line Repair</h3>
+        <p>Expert sewer line diagnosis using latest camera inspection tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div><h3>15+</h3><p>Years Experience</p></div>
+      <div><h3>5,000+</h3><p>Jobs Completed</p></div>
+      <div><h3>24/7</h3><p>Emergency Service</p></div>
+      <div><h3>4.9★</h3><p>Customer Rating</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-title">
+      <h2>What Customers Say</h2>
+      <p>Real reviews from real customers across California</p>
+      <div class="underline"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Called at midnight for a burst pipe and they arrived within 30 minutes. Absolutely amazing service!"</p>
+        <div class="testi-author"><div class="avatar">J</div><div><h4>Jason M.</h4><span>Sacramento, CA</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Professional, fast, and fairly priced. Fixed my water heater the same day I called. Highly recommend!"</p>
+        <div class="testi-author"><div class="avatar">L</div><div><h4>Linda S.</h4><span>Los Angeles, CA</span></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Transparent pricing and excellent work. Skillful Solutions is the only plumber I'll ever call!"</p>
+        <div class="testi-author"><div class="avatar">R</div><div><h4>Robert K.</h4><span>San Diego, CA</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Plumbing Emergency? Don't Wait!</h2>
+    <p>Our expert team is standing by 24/7 to help you across California</p>
+    <a href="tel:18337046186" class="cta-btn"><i class="fas fa-phone"></i> Call (833) 704-6186 Now</a>
+  </section>
+
+</div>
+<!-- END HOME PAGE -->
+
+
+<!-- ==================== ABOUT PAGE ==================== -->
+<div id="page-about" class="page">
+
+  <section class="page-banner">
+    <h1>About Skillful Solutions</h1>
+    <p>California's Most Trusted Emergency Plumbing Team</p>
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a> <span> / About Us</span></div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Skillful Solutions Team">
+      </div>
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>Skillful Solutions is a California-based emergency plumbing company with over 15 years of experience serving homeowners and businesses across the state.</p>
+        <p>Our team of fully licensed and insured plumbers is dedicated to delivering fast, honest, and high-quality plumbing services — 24 hours a day, 7 days a week, 365 days a year.</p>
+        <p>We believe in transparent pricing, respectful service, and getting every job done right the first time. No hidden fees, no surprises — just excellent plumbing work you can count on.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-check-circle"></i> Licensed & Fully Insured Technicians</li>
+          <li><i class="fas fa-check-circle"></i> Upfront & Honest Pricing</li>
+          <li><i class="fas fa-check-circle"></i> Same-Day Emergency Service</li>
+          <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guaranteed</li>
+          <li><i class="fas fa-check-circle"></i> Serving All of California</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="section-title">
+      <h2>Our Core Values</h2>
+      <p>What makes Skillful Solutions different from the rest</p>
+      <div class="underline"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card"><i class="fas fa-handshake"></i><h3>Honesty</h3><p>We provide upfront pricing with no hidden charges. What we quote is what you pay.</p></div>
+      <div class="value-card"><i class="fas fa-bolt"></i><h3>Speed</h3><p>We understand emergencies can't wait. Our team responds fast to minimize damage.</p></div>
+      <div class="value-card"><i class="fas fa-award"></i><h3>Quality</h3><p>We use only the best tools and materials to ensure long-lasting plumbing repairs.</p></div>
+      <div class="value-card"><i class="fas fa-heart"></i><h3>Care</h3><p>We treat your home like our own — always respectful, clean, and professional.</p></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team">
+    <div class="section-title">
+      <h2>Meet Our Expert Team</h2>
+      <p>Experienced, certified plumbers you can trust</p>
+      <div class="underline"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-img"><i class="fas fa-user-tie"></i></div>
+        <h3>Michael Johnson</h3>
+        <span>Master Plumber & Founder</span>
+        <p>15+ years of experience in emergency and commercial plumbing across California.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><i class="fas fa-user-tie"></i></div>
+        <h3>David Martinez</h3>
+        <span>Senior Plumbing Technician</span>
+        <p>Specializes in sewer line repairs and advanced leak detection technology.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><i class="fas fa-user-tie"></i></div>
+        <h3>Chris Anderson</h3>
+        <span>Water Heater Specialist</span>
+        <p>Expert in all types of water heater installations, repairs and maintenance.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><i class="fas fa-user-tie"></i></div>
+        <h3>James Williams</h3>
+        <span>Emergency Response Lead</span>
+        <p>Leads our 24/7 emergency response team, available any time, any day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div><h3>15+</h3><p>Years Experience</p></div>
+      <div><h3>5,000+</h3><p>Jobs Completed</p></div>
+      <div><h3>24/7</h3><p>Emergency Service</p></div>
+      <div><h3>4.9★</h3><p>Customer Rating</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Work With Us?</h2>
+    <p>Call now for fast, professional plumbing service across California</p>
+    <a href="tel:18337046186" class="cta-btn"><i class="fas fa-phone"></i> Call (833) 704-6186</a>
+  </section>
+
+</div>
+<!-- END ABOUT PAGE -->
+
+
+<!-- ==================== SERVICES PAGE ==================== -->
+<div id="page-services" class="page">
+
+  <section class="page-banner">
+    <h1>Our Plumbing Services</h1>
+    <p>Complete plumbing solutions for California homes & businesses</p>
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a> <span> / Services</span></div>
+  </section>
+
+  <section class="services-detail">
+
+    <div class="service-block">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="Emergency Plumbing">
+      <div class="service-content">
+        <h2><i class="fas fa-house-flood-water" style="color:var(--orange)"></i> Emergency Plumbing</h2>
+        <p>Plumbing emergencies don't wait — and neither do we. Our emergency team is available 24/7, 365 days a year to handle any urgent plumbing problem fast.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Available 24/7 including holidays</li>
+          <li><i class="fas fa-check"></i> Average arrival time under 60 minutes</li>
+          <li><i class="fas fa-check"></i> Fully equipped service vehicles</li>
+          <li><i class="fas fa-check"></i> Licensed & insured technicians</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+    <div class="service-block reverse">
+      <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=800&q=80" alt="Drain Cleaning">
+      <div class="service-content">
+        <h2><i class="fas fa-water" style="color:var(--orange)"></i> Drain Cleaning</h2>
+        <p>Blocked drains can cause serious damage if ignored. Our professional drain cleaning service removes all types of clogs quickly and effectively.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Kitchen & bathroom drain clearing</li>
+          <li><i class="fas fa-check"></i> Hydro-jetting service available</li>
+          <li><i class="fas fa-check"></i> Camera inspection included</li>
+          <li><i class="fas fa-check"></i> Preventive maintenance plans</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <img src="https://images.unsplash.com/photo-1567632958507-5b01124a8bbe?auto=format&fit=crop&w=800&q=80" alt="Leak Detection">
+      <div class="service-content">
+        <h2><i class="fas fa-magnifying-glass" style="color:var(--orange)"></i> Leak Detection</h2>
+        <p>Hidden leaks can waste thousands of gallons of water and cause major structural damage. We use advanced technology to find leaks fast without unnecessary digging.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Non-invasive leak detection</li>
+          <li><i class="fas fa-check"></i> Thermal imaging technology</li>
+          <li><i class="fas fa-check"></i> Slab leak detection & repair</li>
+          <li><i class="fas fa-check"></i> Water pressure testing</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+    <div class="service-block reverse">
+      <img src="https://images.unsplash.com/photo-1558618047-f4e70c5b399f?auto=format&fit=crop&w=800&q=80" alt="Water Heater">
+      <div class="service-content">
+        <h2><i class="fas fa-fire-flame-simple" style="color:var(--orange)"></i> Water Heater Repair</h2>
+        <p>No hot water is a major problem. Our water heater specialists diagnose and fix all brands and types of water heaters, including tankless systems.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Tank & tankless water heaters</li>
+          <li><i class="fas fa-check"></i> Same-day replacement available</li>
+          <li><i class="fas fa-check"></i> All brands serviced</li>
+          <li><i class="fas fa-check"></i> Energy-efficient upgrade options</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Burst Pipe">
+      <div class="service-content">
+        <h2><i class="fas fa-snowflake" style="color:var(--orange)"></i> Frozen & Burst Pipe Repair</h2>
+        <p>A burst pipe can flood your home within minutes. Our emergency team responds immediately to stop the damage and restore your plumbing system.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Immediate emergency response</li>
+          <li><i class="fas fa-check"></i> Pipe thawing services</li>
+          <li><i class="fas fa-check"></i> Full pipe replacement if needed</li>
+          <li><i class="fas fa-check"></i> Damage assessment & repair</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+    <div class="service-block reverse">
+      <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=800&q=80" alt="Sewer Line">
+      <div class="service-content">
+        <h2><i class="fas fa-road" style="color:var(--orange)"></i> Sewer Line Repair</h2>
+        <p>Sewer line issues are serious health hazards. Our team uses the latest trenchless technology and camera systems to diagnose and repair sewer problems with minimal disruption.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Camera sewer inspection</li>
+          <li><i class="fas fa-check"></i> Trenchless pipe repair</li>
+          <li><i class="fas fa-check"></i> Root intrusion removal</li>
+          <li><i class="fas fa-check"></i> Full sewer line replacement</li>
+        </ul>
+        <a href="tel:18337046186" class="call-now"><i class="fas fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="section-title">
       <h2>Why Choose Skillful Solutions?</h2>
-      <p>With years of combined experience, our team of licensed plumbers is dedicated to providing fast, honest, and high-quality plumbing services across California.</p>
-      <p>We believe in transparent pricing, respectful service, and getting the job done right the first time.</p>
-      <ul class="about-features">
-        <li><i class="fas fa-check-circle"></i> Licensed & Insured Technicians</li>
-        <li><i class="fas fa-check-circle"></i> Upfront, Honest Pricing</li>
-        <li><i class="fas fa-check-circle"></i> Same-Day Service Available</li>
-        <li><i class="fas fa-check-circle"></i> 100% Satisfaction Guaranteed</li>
-      </ul>
+      <p>What sets us apart from other plumbers in California</p>
+      <div class="underline"></div>
     </div>
-  </div>
-</section>
+    <div class="why-grid">
+      <div class="why-card"><i class="fas fa-clock"></i><h3>24/7 Service</h3><p>We never close. Emergency plumbing help is always just one call away.</p></div>
+      <div class="why-card"><i class="fas fa-dollar-sign"></i><h3>Fair Pricing</h3><p>Upfront quotes with no hidden fees or surprise charges after the job.</p></div>
+      <div class="why-card"><i class="fas fa-certificate"></i><h3>Fully Licensed</h3><p>All our plumbers are California licensed, insured, and background-checked.</p></div>
+      <div class="why-card"><i class="fas fa-thumbs-up"></i><h3>Satisfaction Guaranteed</h3><p>We're not happy until you're 100% satisfied with our work.</p></div>
+    </div>
+  </section>
 
-<!-- STATS -->
-<section class="stats">
-  <div class="stats-grid">
-    <div><h3>15+</h3><p>Years Experience</p></div>
-    <div><h3>5,000+</h3><p>Jobs Completed</p></div>
-    <div><h3>24/7</h3><p>Emergency Service</p></div>
-    <div><h3>4.9★</h3><p>Customer Rating</p></div>
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Need a Plumber Right Now?</h2>
+    <p>Our team is ready 24/7 to handle any plumbing emergency in California</p>
+    <a href="tel:18337046186" class="cta-btn"><i class="fas fa-phone"></i> Call (833) 704-6186</a>
+  </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="section-title">
-    <h2>What Our Customers Say</h2>
-    <p>Real reviews from real customers across California</p>
-  </div>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p>"Called them at midnight for a burst pipe, and they were at my house within 30 minutes. Amazing service!"</p>
-      <div class="testi-author">
-        <div class="avatar">J</div>
-        <div><h4>Jason M.</h4><span>Sacramento, CA</span></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p>"Professional, fast, and fairly priced. Fixed my water heater the same day I called."</p>
-      <div class="testi-author">
-        <div class="avatar">L</div>
-        <div><h4>Linda S.</h4><span>Los Angeles, CA</span></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <p>"Great communication throughout the whole process. Highly recommend Skillful Solutions!"</p>
-      <div class="testi-author">
-        <div class="avatar">R</div>
-        <div><h4>Robert K.</h4><span>San Diego, CA</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
+<!-- END SERVICES PAGE -->
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Plumbing Emergency? We're Ready to Help!</h2>
-  <p>Call now for fast, reliable emergency plumbing service across California</p>
-  <a href="tel:18337046186"><i class="fas fa-phone"></i> Call (833) 704-6186</a>
-</section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-container">
-    <div class="contact-info">
-      <h2>Get In Touch</h2>
-      <div class="contact-item">
-        <i class="fas fa-phone"></i>
-        <div><h4>Call Us</h4><a href="tel:18337046186">(833) 704-6186</a></div>
+<!-- ==================== CONTACT PAGE ==================== -->
+<div id="page-contact" class="page">
+
+  <section class="page-banner">
+    <h1>Contact Us</h1>
+    <p>We're here 24/7 to help with all your plumbing needs</p>
+    <div class="breadcrumb"><a onclick="showPage('home')">Home</a> <span> / Contact</span></div>
+  </section>
+
+  <!-- EMERGENCY BAR -->
+  <div class="emergency-bar">
+    <h2>🚨 Plumbing Emergency? Call Us Right Now!</h2>
+    <a href="tel:18337046186"><i class="fas fa-phone-volume"></i> (833) 704-6186</a>
+  </div>
+
+  <!-- CONTACT INFO + FORM -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get In Touch With Us</h2>
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div><h4>Phone Number</h4><a href="tel:18337046186">(833) 704-6186</a><p>Available 24/7 for emergencies</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-location-dot"></i></div>
+          <div><h4>Service Area</h4><p>Serving All of California</p><p>Los Angeles, San Diego, Sacramento, San Francisco & more</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-clock"></i></div>
+          <div><h4>Business Hours</h4><p>Monday - Sunday: Open 24 Hours</p><p>365 Days a Year — Never Closed</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div><h4>Email Us</h4><a href="mailto:info@skillfulsolutions.com">info@skillfulsolutions.com</a><p>We'll respond within 24 hours</p></div>
+        </div>
+        <div class="social-links">
+          <h4>Follow Us On Social Media</h4>
+          <div class="social-icons">
+            <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </div>
-      <div class="contact-item">
-        <i class="fas fa-location-dot"></i>
-        <div><h4>Service Area</h4><p>Serving all of California</p></div>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-clock"></i>
-        <div><h4>Hours</h4><p>Open 24/7, 365 Days a Year</p></div>
+
+      <!-- FORM -->
+      <div class="contact-form-box">
+        <h2>Request a Service</h2>
+        <div class="form-row">
+          <div class="form-group"><label>First Name *</label><input type="text" placeholder="John" required></div>
+          <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Smith" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="(555) 000-0000" required></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@email.com"></div>
+        </div>
+        <div class="form-group"><label>City / Location *</label><input type="text" placeholder="Your city in California" required></div>
+        <div class="form-group">
+          <label>Service Needed *</label>
+          <select required>
+            <option value="">-- Select a Service --</option>
+            <option>Emergency Plumbing</option>
+            <option>Drain Cleaning</option>
+            <option>Leak Detection</option>
+            <option>Water Heater Repair</option>
+            <option>Frozen / Burst Pipe Repair</option>
+            <option>Sewer Line Repair</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Describe Your Issue *</label><textarea rows="4" placeholder="Please describe your plumbing issue in detail..." required></textarea></div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Send My Request</button>
       </div>
     </div>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="text" placeholder="Service Needed">
-      <textarea rows="4" placeholder="Describe your issue..."></textarea>
-      <button type="submit">Request Service</button>
-    </form>
-  </div>
-</section>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="map-container">
+      <h2>Our Service Area</h2>
+      <div class="map-placeholder">
+        <i class="fas fa-map-location-dot"></i>
+        <p>Serving All of California</p>
+        <span>Los Angeles • San Diego • San Francisco • Sacramento • Fresno & More</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers to common questions</p>
+      <div class="underline"></div>
+    </div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">How quickly can you arrive for an emergency? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Our emergency team typically arrives within 30-60 minutes depending on your location in California. We are available 24/7, 365 days a year.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Do you offer free estimates? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes! We provide free, no-obligation estimates for all plumbing services. Our pricing is always upfront and transparent with no hidden fees.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Are your plumbers licensed and insured? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Absolutely. All our plumbers are fully licensed in California, insured, and background-checked for your complete peace of mind.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">What areas in California do you serve? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">We serve all major cities and surrounding areas across California including Los Angeles, San Diego, San Francisco, Sacramento, Fresno, and many more.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Do you work on weekends and holidays? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer">Yes! We work every single day of the year — including weekends, public holidays, and nights. Plumbing emergencies don't have schedules, and neither do we.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Don't Wait — Call Us Now!</h2>
+    <p>24/7 emergency plumbing service available across all of California</p>
+    <a href="tel:18337046186" class="cta-btn"><i class="fas fa-phone"></i> (833) 704-6186</a>
+  </section>
+
+</div>
+<!-- END CONTACT PAGE -->
+
 
 <!-- FOOTER -->
 <footer>
@@ -616,27 +726,54 @@
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('about')">About Us</a>
+      <a onclick="showPage('services')">Services</a>
+      <a onclick="showPage('contact')">Contact</a>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="#">Emergency Plumbing</a>
-      <a href="#">Drain Cleaning</a>
-      <a href="#">Water Heater Repair</a>
+      <a onclick="showPage('services')">Emergency Plumbing</a>
+      <a onclick="showPage('services')">Drain Cleaning</a>
+      <a onclick="showPage('services')">Water Heater Repair</a>
+      <a onclick="showPage('services')">Sewer Line Repair</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4>Contact Us</h4>
       <p><i class="fas fa-phone"></i> (833) 704-6186</p>
       <p><i class="fas fa-location-dot"></i> California, USA</p>
+      <p><i class="fas fa-clock"></i> Open 24/7</p>
     </div>
   </div>
-  <div class="footer-bottom">
-    &copy; 2026 Skillful Solutions. All Rights Reserved.
-  </div>
+  <div class="footer-bottom">&copy; 2026 Skillful Solutions. All Rights Reserved.</div>
 </footer>
 
+<script>
+// PAGE SWITCHING FUNCTION
+function showPage(pageName) {
+  // Sab pages hide karo
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  // Sirf selected page show karo
+  document.getElementById('page-' + pageName).classList.add('active');
+  // Nav links update karo
+  document.querySelectorAll('nav ul li a').forEach(a => a.classList.remove('active'));
+  document.getElementById('nav-' + pageName).classList.add('active');
+  // Page top par scroll karo
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// MOBILE MENU
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+// FAQ TOGGLE
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('open');
+}
+</script>
 </body>
 </html>
